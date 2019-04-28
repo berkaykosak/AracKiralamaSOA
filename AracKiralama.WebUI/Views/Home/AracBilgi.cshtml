@@ -1,0 +1,26 @@
+﻿@model IEnumerable<AracKiralama.Entities.Arac>
+
+@{
+    ViewBag.Title = "AracBilgi";
+}
+
+<h2>AracBilgi</h2>
+
+<table class="table">
+    <tr>
+        <th>@Html.Display("Göster")</th>
+        <th>@Html.Display("Gösteriyon mu")</th>
+    </tr>
+
+    @foreach (var item in Model)
+    {
+        <td>@Html.DisplayFor(modelItem => item.aracMarka)</td>
+        <td>@Html.DisplayFor(modelItem => item.aracModel)</td>
+    }
+
+
+
+
+
+</table>
+
